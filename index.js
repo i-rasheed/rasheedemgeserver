@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
 
@@ -35,4 +35,4 @@ app.get("/", (req, res) => {
 
 app.use("/users", require("./routes/userRouter"));
 
-app.use("/blog", require("./routes/blogRouter"));
+app.use("/expense", require("./routes/expenseRouter"));
